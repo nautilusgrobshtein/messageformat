@@ -1,0 +1,20 @@
+{
+  "name": "messageformat",
+  "version": "1.0.2",
+  "description": "PluralFormat and SelectFormat Message and i18n Tool - A JavaScript Implemenation of the ICU standards.",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "messageformat-parser": "^1.0.0",
+    "reserved-words": "^0.1.1"
+  },
+  "devDependencies": {
+    "browserify": "~13.1.0",
+    "expect.js": "*",
+    "jsdoc": "~3.4.0",
+    "mocha": "~3.0.2",
+    "serve": "*",
+    "tmp": "*",
+    "uglify-js": "~2.7.3"
+  }
+}
