@@ -106,13 +106,19 @@ Runtime.prototype.toString = function(pluralFuncs, compiler) {
 		obj[key] = 'require("messageformat/plurals").' + key;
 	});
 	Object.keys(compiler.runtime).forEach(function(fn) {
-		obj[fn] = 'require("messageformat/utility/' + fn + '")';
+		if (fn === "react") {
+			obj["React"] = 'require("react")';
+		} else {
+			obj[fn] = 'require("messageformat/utility/' + fn + '")';
+		}
 	}, this);
 	var fmtKeys = Object.keys(compiler.formatters);
 	var fmt = this.mf.fmt;
+
 	if (fmtKeys.length) obj.fmt = fmtKeys.reduce(function(o, key) {
 		o[key] = fmt[key];
 		return o;
 	}, {});
+
 	return _stringify(obj, 0);
 }
