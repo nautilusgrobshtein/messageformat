@@ -1,5 +1,5 @@
 var reserved = require('reserved-words');
-var parse = require('messageformat-parser').parse;
+var parse = require('./parser.js').parse;
 
 function hasReactToken(parsed) {
 	var hasReactToken = false;
@@ -9,7 +9,7 @@ function hasReactToken(parsed) {
 			if (item && item.type && (item.type === "react" || item.type === "reactWrap")) {
 				hasReactToken = true;
 			}
-		})
+		});
 
 	return hasReactToken;
 }

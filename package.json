@@ -5,16 +5,20 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "messageformat-parser": "https://github.com/nautilusgrobshtein/messageformat-parser.git#01c0674",
     "reserved-words": "^0.1.1"
   },
   "devDependencies": {
     "browserify": "~13.1.0",
-    "expect.js": "*",
+    "expect.js": "^0.3.1",
     "jsdoc": "~3.4.0",
-    "mocha": "~3.0.2",
-    "serve": "*",
-    "tmp": "*",
+    "mocha": "^3.0.2",
+	"pegjs": "^0.10.0",
+	"serve": "*",
+	"tmp": "*",
     "uglify-js": "~2.7.3"
+  },
+  "scripts": {
+	"install": "pegjs parser.pegjs",
+	"test": "mocha"
   }
 }
