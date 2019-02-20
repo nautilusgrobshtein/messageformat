@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "messageformat-parser": "^1.0.0",
+    "messageformat-parser": "https://github.com/nautilusgrobshtein/messageformat-parser.git#01c0674",
     "reserved-words": "^0.1.1"
   },
   "devDependencies": {
